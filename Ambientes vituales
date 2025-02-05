@@ -1,0 +1,24 @@
+ambientes / entornos vituales
+
+Entornos virtuales de Python
+Los entornos virtuales en Python son espacios aislados donde puedes instalar paquetes específicos para un proyecto sin afectar a otros proyectos o a la instalación global de Python. Aquí te explico cómo crear y gestionar un entorno virtual:
+
+Creación de un entorno virtual: Puedes crear un entorno virtual usando el módulo venv que viene integrado en Python 3.3 y versiones posteriores. Ejecuta el siguiente comando en la terminal:
+python -m venv myenv
+Donde myenv es el nombre que le das al entorno virtual.
+Activación del entorno virtual: Una vez creado, debes activar el entorno para comenzar a trabajar en él. En sistemas Unix (macOS y Linux) y en Windows con el shell de comandos, usa:
+source myenv/bin/activate
+En Windows con el shell de comandos de PowerShell, usa:
+myenv\Scripts\activate
+Instalación de paquetes: Dentro del entorno virtual, puedes instalar paquetes usando pip sin afectar a la instalación global de Python. Por ejemplo:
+pip install paquete
+Desactivación del entorno virtual: Cuando termines de trabajar en el entorno, puedes desactivarlo con:
+deactivate
+Eliminación del entorno virtual: Para eliminar un entorno virtual, simplemente elimina la carpeta que lo contiene. Por ejemplo:
+rm -rf myenv
+Uso de requirements.txt: Puedes crear un archivo requirements.txt que contenga todas las dependencias de tu proyecto. Para generar este archivo, usa:
+pip freeze > requirements.txt
+Para instalar todas las dependencias desde un archivo requirements.txt, usa:
+pip install -r requirements.txt
+Estos pasos te permitirán gestionar eficazmente tus entornos virtuales en Python, asegurando que cada proyecto tenga sus propias dependencias sin interferir en otros proyectos.
+
